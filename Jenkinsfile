@@ -11,9 +11,8 @@ pipeline {
         }
         stage('Build Fat Jar') {
             steps {
-                dir('spring-boot-how') {
-                sh 'mvn clean package -DskipTests'
-		}
+           
+                sh 'mvn clean package -DskipTests'		
             }
         }
     }
