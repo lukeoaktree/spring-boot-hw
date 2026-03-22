@@ -1,4 +1,4 @@
-pipeline {
+ipeline {
     agent any
     tools {
         maven 'maven' // This must match your Jenkins Global Tool name
@@ -11,8 +11,9 @@ pipeline {
         }
         stage('Build Fat Jar') {
             steps {
-                // This command creates the .jar file in the /target folder
+                dir('spring-boot-how') {
                 sh 'mvn clean package -DskipTests'
+		}
             }
         }
     }
