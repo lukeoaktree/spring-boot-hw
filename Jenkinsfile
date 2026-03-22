@@ -1,4 +1,4 @@
-ipeline {
+pipeline {
     agent any
     tools {
         maven 'maven' // This must match your Jenkins Global Tool name
